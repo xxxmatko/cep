@@ -4,7 +4,8 @@ define([
     "knockout.validation",
     "materialize",
     "my/i18n",
-    "my/bindings/i18n"
+    "my/bindings/i18n",
+    "my/extenders/async"
 ], function ($, ko, koValidation, M, i18n) {
     //#region [ Fields ]
     
