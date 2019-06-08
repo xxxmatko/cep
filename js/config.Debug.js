@@ -17,7 +17,7 @@ require({
     },
     config: {
         "my/i18n": {
-            language: (window.location.href.indexOf("lang=") !== -1) ? window.location.href.split("lang=")[1].substr(0, 2) : document.documentElement.lang || "en"
+            language: (window.location.href.indexOf("lang=") !== -1) ? window.location.href.split("lang=")[1].substr(0, 2) : document.documentElement.lang || "sk"
         },
         "my/components/app/app": {
         }
