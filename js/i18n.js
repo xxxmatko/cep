@@ -7,6 +7,7 @@ define([
     //#region [ Fields ]
 
     var instance = null;
+    i18next = i18next.default;
 
     //#endregion
     
@@ -30,7 +31,7 @@ define([
             read: this._getLanguage.bind(this),
             write: this._setLanguage.bind(this)
         });
-debugger;
+
         // Initialization of i18next
         i18next.init({
             lng: args.language,
