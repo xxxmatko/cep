@@ -1,6 +1,7 @@
 define([
+    "knockout",
     "text!./app.html"
-], function (view) {
+], function (ko, view) {
     //#region [ Fields ]
 
     var global = (function() { return this; })();
@@ -19,6 +20,26 @@ define([
         console.log("App()");
 
         this.lang = args.lang;
+        this.background = ko
+            .pureComputed(this._getBackground, this)
+            .extend({ 
+                async: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            });
+    };
+
+    //#endregion
+
+
+    //#region [ Getters, Setters ]
+
+    /**
+     * Fetch random background image.
+     */
+    Model.prototype._getBackground = function() {
+        return fetch("https://picsum.photos/1280/1024.jpg")
+            .then(function(r){
+                return r.url;
+            });
     };
 
     //#endregion
@@ -31,6 +52,8 @@ define([
      */
     Model.prototype.dispose = function () {
         console.log("~App()");
+
+        this.background.dispose();
     };
 
     //#endregion
