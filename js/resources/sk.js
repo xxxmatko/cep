@@ -1,7 +1,7 @@
 define([], function () {
     return {
         translation: {
-            "title": "Ahoj svet!"
+            "title": "Cestovný príkaz"
         }
     };
 });

@@ -7,4 +7,19 @@
     height: 100vh;
     position: fixed;
     background-position: center -2px;
+
+    &__container {
+        background-color: @bg-color;
+        border-radius: .3125rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+        .row {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
