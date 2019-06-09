@@ -18,7 +18,7 @@ define([
 	 */
     var Model = function (args) {
         console.log("App()");
-
+//https://www.jqueryscript.net/demo/Material-Design-Wizard-Form-Plugin-jQuery-Bootstrap/
         this.lang = args.lang;
         this.background = ko
             .pureComputed(this._getBackground, this)
