@@ -36,7 +36,7 @@ define([
      * Fetch random background image.
      */
     Model.prototype._getBackground = function() {
-        return fetch("https://picsum.photos/1280/1024.jpg")
+        return fetch("https://picsum.photos/1280/768.jpg")
             .then(function(r){
                 return r.url;
             });
