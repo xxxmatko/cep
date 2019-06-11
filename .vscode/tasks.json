@@ -15,7 +15,7 @@
             "label": "build:Debug",
             "type": "shell",
             "windows": {
-                "command": "grunt"
+                "command": ".\\node_modules\\.bin\\grunt"
             },
             "args": [
                 "--gruntfile",
@@ -69,7 +69,7 @@
             "label": "build:Release",
             "type": "shell",
             "windows": {
-                "command": "grunt"
+                "command": ".\\node_modules\\.bin\\grunt"
             },
             "args": [
                 "--gruntfile",
