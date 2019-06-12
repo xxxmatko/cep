@@ -44,6 +44,7 @@ module.exports = function (grunt) {
                         "requirejs",
                         "my/main",
                         "my/components/app/app",
+                        "my/components/pager/pager",
                         "config"
                     ]
                 }]

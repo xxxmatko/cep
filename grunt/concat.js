@@ -7,7 +7,8 @@ module.exports = function (grunt) {
                 "wwwroot/css/materialize.css",
                 "wwwroot/css/appicons.css",
                 "wwwroot/css/site.css",
-                "wwwroot/css/components/app.css"
+                "wwwroot/css/components/app.css",
+                "wwwroot/css/components/pager.css"
             ],
             dest: "wwwroot/css/site.css"
         }   
