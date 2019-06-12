@@ -1,0 +1,51 @@
+@import "mixins/vars.less";
+@import "mixins/helpers.less";
+
+.btn {
+    font-family: @font-family;
+    font-weight: 500;
+    box-shadow: none;
+    .transition-all;
+
+    &--primary {
+        background-color: @secondary-color;
+    
+        &:focus {
+            background-color: @secondary-color-dark;
+        }
+
+        &:hover {
+            background-color: @secondary-color-dark;
+            box-shadow: 0 14px 26px -12px fade(@secondary-color-dark, 42%), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px fade(@secondary-color-dark, 20%);
+        }
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: @secondary-color;
+
+        &:focus {
+            background-color: @secondary-color-dark;
+            color: @bg-color;
+        }
+
+        &:hover {
+            color: @bg-color;
+            background-color: @secondary-color-dark;
+            box-shadow: 0 14px 26px -12px fade(@secondary-color-dark, 42%), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px fade(@secondary-color-dark, 20%);
+        }
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+        background-color: @disabled-color;
+        color: @bg-color;
+
+        &:focus,
+        &:hover {
+            background-color: @disabled-color;
+            color: @bg-color;
+            box-shadow: none;  
+        }
+    }
+}
