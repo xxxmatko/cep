@@ -23,12 +23,11 @@
         </div>
         <div class="row footer">
             <div class="col s6">
-                <button class="btn btn--secondary">prev</button>
-                <button class="btn btn--secondary btn--disabled">prev</button>
+                <button class="btn btn--secondary" data-bind="i18n: 'prev', visible: hasPrev"></button>
             </div>
             <div class="col s6">
-                <button class="btn btn--primary">next</button>
-                <button class="btn btn--primary btn--disabled">next</button>
+                <button class="btn btn--primary" data-bind="i18n: 'next', visible: hasNext"></button>
+                <button class="btn btn--primary" data-bind="i18n: 'print', hidden: hasNext"></button>
             </div>
         </div>        
     </div>

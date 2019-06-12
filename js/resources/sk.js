@@ -12,7 +12,10 @@ define([], function () {
                 "summary": {
                     "title": "Zhrnutie"
                 }
-            }
+            },
+            "next": "Pokračovať",
+            "prev": "Späť",
+            "print": "Vytlačiť"
         }
     };
 });
