@@ -39,7 +39,8 @@ define([
      * 
      * @param {string} step Current step.
      */
-    Model.prototype.setStep = function(step) {
+    Model.prototype.setStep = function(step, e) {
+        e.preventDefault();
         this.step(step);
     };
 

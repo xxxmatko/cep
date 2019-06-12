@@ -76,6 +76,10 @@ define([
     Model.createViewModel = function (params, componentInfo) {
         params.element = componentInfo.element; 
         
+        setTimeout(function() {
+            global.app.step("basicInfo");
+        }, 0);
+
         return (global.app = new Model(params));
     };
 
