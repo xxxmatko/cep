@@ -23,11 +23,11 @@
         </div>
         <div class="row footer">
             <div class="col s6">
-                <button class="btn btn--secondary" data-bind="i18n: 'prev', visible: hasPrev"></button>
+                <button class="btn btn--secondary" data-bind="i18n: 'prev', visible: hasPrev, click: $component.go.bind($component, -1)"></button>
             </div>
             <div class="col s6">
-                <button class="btn btn--primary" data-bind="i18n: 'next', visible: hasNext"></button>
-                <button class="btn btn--primary" data-bind="i18n: 'print', hidden: hasNext"></button>
+                <button class="btn btn--primary" data-bind="i18n: 'next', visible: hasNext, click: $component.go.bind($component, 1)"></button>
+                <button class="btn btn--primary" data-bind="i18n: 'print', hidden: hasNext, click: finish"></button>
             </div>
         </div>        
     </div>

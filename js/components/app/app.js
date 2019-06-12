@@ -79,6 +79,28 @@ define([
     //#region [ Methods : Public ]
     
     /**
+     * Navigates through steps in specified direction.
+     * 
+     * @param {number} direction If set to 1 then go to the next step, if set to -1 go to the previous step.
+     */
+    Model.prototype.go = function(direction) {
+        var steps = this.steps();
+        var idx = steps.indexOf(this.step());
+
+        var step = steps[idx + direction];
+        this.step(step);
+    };
+
+  
+    /**
+     * Finishes the wizard.
+     */
+    Model.prototype.finish = function() {
+        console.info("finish");
+    };
+
+
+    /**
      * Dispose.
      */
     Model.prototype.dispose = function () {
