@@ -12,6 +12,9 @@ define([
 	 */
     var Model = function (args, info) {
         console.log("Pager()");
+
+        this.page = args.page || ko.observable("");
+        this.pages = args.pages || ko.observableArray([]);
     };
 
     //#endregion
@@ -24,6 +27,20 @@ define([
      */
     Model.prototype.dispose = function () {
         console.log("~Pager()");
+    };
+
+    //#endregion
+
+
+    //#region [ Event Handlers ]
+
+    /**
+     * Sets the current page.
+     * 
+     * @param {string} page Current page.
+     */
+    Model.prototype.setPage = function(page) {
+        this.page(page);
     };
 
     //#endregion
