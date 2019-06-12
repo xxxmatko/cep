@@ -30,10 +30,11 @@ define([
         this.title = ko.observable("");
         this.description = ko.observable("");
         this.step = ko.observable("");
-        this.steps = ko.observableArray(["basicInfo", "arrivals", "summary"]);
+        this.steps = ko.observableArray(["basic-info", "arrivals", "summary"]);
+        this.stepParams = ko.computed(this._getStepParams, this);
         
-        this.hasPrev = ko.computed(this._hasPrev, this);
-        this.hasNext = ko.computed(this._hasNext, this);
+        this.hasPrev = ko.computed(this._getHasPrev, this);
+        this.hasNext = ko.computed(this._getHasNext, this);
     };
 
     //#endregion
@@ -55,7 +56,7 @@ define([
     /**
      * Gets value indicating whether there is a previous step or not.
      */
-    Model.prototype._hasPrev = function() {
+    Model.prototype._getHasPrev = function() {
         var step = this.step();
         var steps = this.steps();
 
@@ -66,11 +67,29 @@ define([
     /**
      * Gets value indicating whether there is a next step or not.
      */
-    Model.prototype._hasNext = function() {
+    Model.prototype._getHasNext = function() {
         var step = this.step();
         var steps = this.steps();
 
         return steps.indexOf(step) < steps.length - 1;
+    };
+
+
+    /**
+     * Get parameters for active step component.
+     */
+    Model.prototype._getStepParams = function() {
+        var step = this.step();
+
+        switch(step) {
+            case "basic-info":
+                return {
+                    title: this.title,
+                    description: this.description
+                };
+            default:
+                return {};
+        }
     };
 
     //#endregion
@@ -125,7 +144,7 @@ define([
         params.element = componentInfo.element; 
         
         setTimeout(function() {
-            global.app.step("basicInfo");
+            global.app.step("basic-info");
         }, 0);
 
         return (global.app = new Model(params));

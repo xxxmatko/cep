@@ -12,6 +12,11 @@ define([
 	 */
     var Model = function (args, info) {
         console.log("BasicInfo()");
+    
+        this.title = args.title || ko.observable("");
+        this.description = args.description || ko.observable("");
+
+        
     };
 
     //#endregion

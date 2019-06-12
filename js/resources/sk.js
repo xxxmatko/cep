@@ -3,7 +3,7 @@ define([], function () {
         translation: {
             "title": "Cestovný príkaz",
             "steps": {
-                "basicInfo": {
+                "basic-info": {
                     "title": "Základné údaje"
                 },
                 "arrivals": {
