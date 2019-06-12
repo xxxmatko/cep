@@ -45,6 +45,7 @@ module.exports = function (grunt) {
                         "my/main",
                         "my/components/app/app",
                         "my/components/wizard/wizard",
+                        "my/components/step/basic-info/basic-info",
                         "config"
                     ]
                 }]

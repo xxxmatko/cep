@@ -19,7 +19,8 @@ define([
 
     ko.components.register("my-app", { require: "my/components/app/app" });
     ko.components.register("my-wizard", { require: "my/components/wizard/wizard" });
-    
+    ko.components.register("my-basic-info", { require: "my/components/step/basic-info/basic-info" });
+        
     //#endregion
 
 
