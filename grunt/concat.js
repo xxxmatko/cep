@@ -8,7 +8,7 @@ module.exports = function (grunt) {
                 "wwwroot/css/appicons.css",
                 "wwwroot/css/site.css",
                 "wwwroot/css/components/app.css",
-                "wwwroot/css/components/pager.css"
+                "wwwroot/css/components/wizard.css"
             ],
             dest: "wwwroot/css/site.css"
         }   

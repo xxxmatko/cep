@@ -18,7 +18,7 @@ define([
     //#region [ Component registration ]
 
     ko.components.register("my-app", { require: "my/components/app/app" });
-    ko.components.register("my-pager", { require: "my/components/pager/pager" });
+    ko.components.register("my-wizard", { require: "my/components/wizard/wizard" });
     
     //#endregion
 

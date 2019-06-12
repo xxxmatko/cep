@@ -1,0 +1,5 @@
+<ul class="wizard" data-bind="foreach: pages">
+    <li class="wizard__item" data-bind="css: { 'wizard__item--active': $parent.page() === $data }">
+        <a href="#" data-bind="text: $data, click: $component.setPage.bind($component)"></a>
+    </li>
+</ul>

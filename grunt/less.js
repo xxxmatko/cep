@@ -10,7 +10,7 @@ module.exports = function (grunt) {
             files: {
                 "wwwroot/css/site.css": "less/site.less",
                 "wwwroot/css/components/app.css": "js/components/app/app.less",
-                "wwwroot/css/components/pager.css": "js/components/pager/pager.less"
+                "wwwroot/css/components/wizard.css": "js/components/wizard/wizard.less"
             }
         }     
     });

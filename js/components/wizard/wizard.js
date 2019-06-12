@@ -1,6 +1,6 @@
 define([
     "knockout",
-    "text!./pager.html"
+    "text!./wizard.html"
 ], function (ko, view) {
     //#region [ Constructor ]
 
@@ -11,7 +11,7 @@ define([
      * @param {object} info Component info.
 	 */
     var Model = function (args, info) {
-        console.log("Pager()");
+        console.log("Wizard()");
 
         this.page = args.page || ko.observable("");
         this.pages = args.pages || ko.observableArray([]);
@@ -26,7 +26,7 @@ define([
      * Dispose.
      */
     Model.prototype.dispose = function () {
-        console.log("~Pager()");
+        console.log("~Wizard()");
     };
 
     //#endregion
