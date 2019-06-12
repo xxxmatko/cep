@@ -13,8 +13,8 @@ define([
     var Model = function (args, info) {
         console.log("Wizard()");
 
-        this.page = args.page || ko.observable("");
-        this.pages = args.pages || ko.observableArray([]);
+        this.step = args.step || ko.observable("");
+        this.steps = args.steps || ko.observableArray([]);
     };
 
     //#endregion
@@ -35,12 +35,12 @@ define([
     //#region [ Event Handlers ]
 
     /**
-     * Sets the current page.
+     * Sets the current step.
      * 
-     * @param {string} page Current page.
+     * @param {string} step Current step.
      */
-    Model.prototype.setPage = function(page) {
-        this.page(page);
+    Model.prototype.setStep = function(step) {
+        this.step(step);
     };
 
     //#endregion
