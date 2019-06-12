@@ -16,7 +16,8 @@ define([
         this.title = args.title || ko.observable("");
         this.description = args.description || ko.observable("");
 
-        
+        this.title("");
+        this.description("steps.basic-info.description");
     };
 
     //#endregion

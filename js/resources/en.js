@@ -4,7 +4,8 @@ define([], function () {
             "title": "en:Cestovný príkaz",
             "steps": {
                 "basic-info": {
-                    "title": "en:Základné údaje"
+                    "title": "en:Základné údaje",
+                    "description": "en:Vyplňte prosím základné údaje"
                 },
                 "arrivals": {
                     "title": "en:Odchody"
