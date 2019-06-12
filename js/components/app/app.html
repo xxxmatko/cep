@@ -4,7 +4,7 @@
             <div class="col s12">
                 <div class="app__header">
                     <h1 data-bind="i18n: 'title'"></h1>
-                    <h5>This information will let us know more about you</h5>
+                    <h5 data-bind="i18n: title(), visible: title().length"></h5>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
         </div>
         <div class="row">
             <div class="col s12 app__main">
-                <h4>Let's start with the basic details.</h4>
+                <h4 data-bind="i18n: description(), visible: description().length"></h4>
                 lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>
                 lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>
                 lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum<br>lorem ipsum

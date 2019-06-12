@@ -5,6 +5,7 @@ define([
     //#region [ Fields ]
 
     var global = (function() { return this; })();
+    //https://www.jqueryscript.net/demo/Material-Design-Wizard-Form-Plugin-jQuery-Bootstrap/
 
     //#endregion
     
@@ -18,13 +19,17 @@ define([
 	 */
     var Model = function (args) {
         console.log("App()");
-//https://www.jqueryscript.net/demo/Material-Design-Wizard-Form-Plugin-jQuery-Bootstrap/
+
         this.lang = args.lang;
         this.background = ko
             .pureComputed(this._getBackground, this)
             .extend({ 
                 async: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             });
+            
+        this.title = ko.observable("");
+        this.description = ko.observable("");
+        this.step = ko.observable("");
     };
 
     //#endregion
