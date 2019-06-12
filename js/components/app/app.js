@@ -30,6 +30,10 @@ define([
         this.title = ko.observable("");
         this.description = ko.observable("");
         this.step = ko.observable("");
+        this.steps = ko.observableArray(["basicInfo", "arrivals", "summary"]);
+        
+        this.hasPrev = ko.computed(this._hasPrev, this);
+        this.hasNext = ko.computed(this._hasNext, this);
     };
 
     //#endregion
@@ -45,6 +49,28 @@ define([
             .then(function(r){
                 return r.url;
             });
+    };
+
+
+    /**
+     * Gets value indicating whether there is a previous step or not.
+     */
+    Model.prototype._hasPrev = function() {
+        var step = this.step();
+        var steps = this.steps();
+
+        return steps.indexOf(step) > 0;
+    };
+
+
+    /**
+     * Gets value indicating whether there is a next step or not.
+     */
+    Model.prototype._hasNext = function() {
+        var step = this.step();
+        var steps = this.steps();
+
+        return steps.indexOf(step) < steps.length - 1;
     };
 
     //#endregion
