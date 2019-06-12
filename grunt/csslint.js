@@ -9,7 +9,8 @@ module.exports = function (grunt) {
             "box-model": false,
             "overqualified-elements": false,
             "display-property-grouping": false,
-            "important": false
+            "important": false,
+            "outline-none": false
         },
         src: [
             "wwwroot/css/**/*.css",
