@@ -87,6 +87,11 @@ define([
                     title: this.title,
                     description: this.description
                 };
+            case "arrivals":
+                return {
+                    title: this.title,
+                    description: this.description
+                };
             default:
                 return {};
         }
