@@ -21,7 +21,8 @@ define([
     ko.components.register("my-wizard", { require: "my/components/wizard/wizard" });
     ko.components.register("my-basic-info", { require: "my/components/step/basic-info/basic-info" });
     ko.components.register("my-arrivals", { require: "my/components/step/arrivals/arrivals" });
-            
+    ko.components.register("my-summary", { require: "my/components/step/summary/summary" });
+                
     //#endregion
 
 

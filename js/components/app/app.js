@@ -92,6 +92,11 @@ define([
                     title: this.title,
                     description: this.description
                 };
+            case "summary":
+                return {
+                    title: this.title,
+                    description: this.description
+                };
             default:
                 return {};
         }

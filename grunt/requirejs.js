@@ -47,6 +47,7 @@ module.exports = function (grunt) {
                         "my/components/wizard/wizard",
                         "my/components/step/basic-info/basic-info",
                         "my/components/step/arrivals/arrivals",
+                        "my/components/step/summary/summary",
                         "config"
                     ]
                 }]
