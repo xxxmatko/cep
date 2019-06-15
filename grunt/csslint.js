@@ -10,7 +10,8 @@ module.exports = function (grunt) {
             "overqualified-elements": false,
             "display-property-grouping": false,
             "important": false,
-            "outline-none": false
+            "outline-none": false,
+            "adjoining-classes": false
         },
         src: [
             "wwwroot/css/**/*.css",

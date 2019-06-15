@@ -1,0 +1,109 @@
+@import "mixins/vars.less";
+
+.app {
+    .input-field {
+        label {
+            color: fade(@tertiary-color, 55%);
+        }
+    
+        input[type=text] ,
+        textarea {
+            &:focus {
+                border-bottom: 1px solid @primary-color;
+                box-shadow: 0 1px 0 0 @primary-color;
+    
+                + label {
+                    color: @primary-color;
+                }
+            }
+        }
+
+        .prefix {
+            color: fade(@fg-color, 45%);
+
+            &.active {
+                color: @fg-color;
+            }
+        }
+
+        &--active {
+            label {
+                color: @primary-color;
+            }
+
+            .file-path {
+                border-bottom: 1px solid @primary-color;
+                box-shadow: 0 1px 0 0 @primary-color;
+            }
+        }
+
+        &--negative {
+            background: fade(@fg-color, 16%);
+            border-radius: .25rem;
+            transition: background-color .3s ease;
+            
+            input[type=text],
+            textarea {
+                color: fade(@fg-color, 45%);
+                border-bottom: 0;
+                margin-top: .25rem;
+                margin-bottom: .25rem;
+
+                &:focus {
+                    border-bottom: 0;
+                    box-shadow: none;
+                }
+            }
+
+            .prefix {
+                color: @fg-color;
+    
+                &.active {
+                    color: @tertiary-color;
+                }
+            }  
+            
+            &.input-field--active {
+                background: @fg-color;
+                box-shadow: 0 1px 1px rgba(0,0,0,.24);
+
+                input[type=text],
+                textarea {
+                    color: @tertiary-color;
+    
+                    &:focus {
+                        border-bottom: 0;
+                        box-shadow: none;
+                    }
+                }
+
+                .prefix {
+                    color: @tertiary-color;
+                }                 
+            }
+        }
+
+        &--inverse {
+            label {
+                color: @invert-fg-color;
+                .secondary-text-shadow;
+            }
+
+            input[type=text],
+            textarea {
+                color: @fg-color;
+                border-bottom: 1px solid @tertiary-color-light;
+
+                &:focus {
+                    border-bottom: 1px solid @fg-color;
+                    box-shadow: 0 1px 0 0 @fg-color;
+        
+                    + label {
+                        color: @fg-color;
+                        .primary-text-shadow;
+                    }
+                }
+            }            
+        }
+    }
+}
