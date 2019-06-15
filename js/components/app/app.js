@@ -35,6 +35,8 @@ define([
         
         this.hasPrev = ko.computed(this._getHasPrev, this);
         this.hasNext = ko.computed(this._getHasNext, this);
+
+        this.name = ko.observable("");
     };
 
     //#endregion
@@ -85,7 +87,8 @@ define([
             case "basic-info":
                 return {
                     title: this.title,
-                    description: this.description
+                    description: this.description,
+                    name: this.name
                 };
             case "arrivals":
                 return {

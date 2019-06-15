@@ -5,7 +5,8 @@ define([], function () {
             "steps": {
                 "basic-info": {
                     "title": "Základné údaje",
-                    "description": "Vyplňte prosím základné údaje"
+                    "description": "Vyplňte prosím základné údaje",
+                    "nameLabel": "Priezvisko, meno, titul"
                 },
                 "arrivals": {
                     "title": "Odchody"

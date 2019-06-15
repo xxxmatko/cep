@@ -16,6 +16,8 @@ define([
         this.title = args.title || ko.observable("");
         this.description = args.description || ko.observable("");
 
+        this.name = args.name || ko.observable("");
+
         this.title("");
         this.description("steps.basic-info.description");
     };
