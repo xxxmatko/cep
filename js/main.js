@@ -5,6 +5,7 @@ define([
     "materialize",
     "my/i18n",
     "my/bindings/i18n",
+    "my/bindings/inputField",
     "my/extenders/async"
 ], function ($, ko, koValidation, M, i18n) {
     //#region [ Fields ]
