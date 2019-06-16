@@ -11,7 +11,8 @@ module.exports = function (grunt) {
             "display-property-grouping": false,
             "important": false,
             "outline-none": false,
-            "adjoining-classes": false
+            "adjoining-classes": false,
+            "box-sizing": false
         },
         src: [
             "wwwroot/css/**/*.css",
