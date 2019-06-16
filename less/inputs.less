@@ -2,15 +2,34 @@
 
 .app {
     .input-field {
+        &::after {
+            content: "\00a0";
+            background: @primary-color;
+            width: 0;
+            position: absolute;
+            height: 1px;
+            bottom: .5rem;
+            box-shadow: 0 1px 0 0 @primary-color;
+            opacity: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width ease .3s;
+        }
+
         label {
             color: fade(@tertiary-color, 55%);
         }
     
         input[type=text] ,
         textarea {
+            box-sizing: border-box;
+            border-bottom: 1px solid fade(@tertiary-color, 55%);
+
             &:focus {
-                border-bottom: 1px solid @primary-color;
-                box-shadow: 0 1px 0 0 @primary-color;
+                //border-bottom: 1px solid @primary-color;
+                //box-shadow: 0 1px 0 0 @primary-color;
+                border-bottom-color: fade(@tertiary-color, 55%);
+                box-shadow: none;
     
                 + label {
                     color: @primary-color;
@@ -27,6 +46,10 @@
         }
 
         &--active {
+            &::after {
+                width: calc(100% - 2 * 0.75rem);
+            }
+
             label {
                 color: @primary-color;
             }
