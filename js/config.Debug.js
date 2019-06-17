@@ -13,7 +13,8 @@ require({
         "knockout": "/js/libs/knockout",
         "knockout.validation": "/js/libs/knockout.validation",
         "materialize": "/js/libs/materialize",
-        "text": "/js/libs/text"
+        "text": "/js/libs/text",
+        "mustache": "/js/libs/mustache"
     },
     config: {
         "my/i18n": {

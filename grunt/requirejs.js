@@ -24,7 +24,8 @@ module.exports = function (grunt) {
                     "knockout.validation": "./libs/knockout.validation",
                     "materialize": "./libs/materialize",
                     "text": "./libs/text",
-                    "i18next": "./libs/i18next"
+                    "i18next": "./libs/i18next",
+                    "mustache": "./libs/mustache"
                 },
                 packages: [{
                     name: "my",

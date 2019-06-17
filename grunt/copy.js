@@ -34,7 +34,8 @@ module.exports = function (grunt) {
                     "requirejs-text/text.js",
                     "knockout/build/output/knockout-latest.debug.js",
                     "knockout.validation/dist/knockout.validation.js",
-                    "i18next/dist/umd/i18next.js"
+                    "i18next/dist/umd/i18next.js",
+                    "mustache/mustache.js"
                 ],
                 dest: "js/libs/",
                 filter: "isFile"

@@ -23,6 +23,7 @@
         "requirejs-text": "2.0.15",
         "knockout": "3.5.0",
         "knockout.validation": "2.0.3",
-        "i18next": "17.0.2"
+        "i18next": "17.0.2",
+        "mustache": "3.0.1"
     }
 }
