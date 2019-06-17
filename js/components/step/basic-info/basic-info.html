@@ -1,8 +1,40 @@
 <div class="step">
     <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s12 m4">
             <input id="name" type="text" data-bind="textInput: name, inputField: true" />
             <label for="name" data-bind="i18n: 'steps.basic-info.nameLabel', css: { 'active': name().length }"></label>
         </div>
+        <div class="input-field col s12 m2">
+            <input id="personalId" type="text" data-bind="textInput: personalId, inputField: true" />
+            <label for="personalId" data-bind="i18n: 'steps.basic-info.personalId', css: { 'active': personalId().length }"></label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input id="section" type="text" data-bind="textInput: section, inputField: true" />
+            <label for="section" data-bind="i18n: 'steps.basic-info.section', css: { 'active': section().length }"></label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input id="phone" type="text" data-bind="textInput: phone, inputField: true" />
+            <label for="phone" data-bind="i18n: 'steps.basic-info.phone', css: { 'active': phone().length }"></label>
+        </div>
     </div>
+    <div class="row">
+        <div class="input-field col s12 m4">
+            <input id="address" type="text" data-bind="textInput: address, inputField: true" />
+            <label for="address" data-bind="i18n: 'steps.basic-info.address', css: { 'active': address().length }"></label>
+        </div>
+        <div class="input-field col s12 m8">
+            <input id="car" type="text" data-bind="textInput: car, inputField: true" />
+            <label for="car" data-bind="i18n: 'steps.basic-info.car', css: { 'active': car().length }"></label>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="input-field col s12 m3">
+            <input id="money" type="text" data-bind="textInput: money, inputField: true" />
+            <label for="money" data-bind="i18n: 'steps.basic-info.money', css: { 'active': money().length }"></label>
+        </div>
+        <div class="input-field col s12 m9">
+            <input id="account" type="text" data-bind="textInput: account, inputField: true" />
+            <label for="account" data-bind="i18n: 'steps.basic-info.account', css: { 'active': account().length }"></label>
+        </div>
+    </div> 
 </ul>

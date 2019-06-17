@@ -17,7 +17,14 @@ define([
         this.description = args.description || ko.observable("");
 
         this.name = args.name || ko.observable("");
-
+        this.personalId = args.personalId || ko.observable("");
+        this.section = args.section || ko.observable("");
+        this.phone = args.phone || ko.observable("");
+        this.address = args.address || ko.observable("");
+        this.car = args.car || ko.observable("");
+        this.money = args.money || ko.observable("");
+        this.account = args.account || ko.observable("");
+                
         this.title("");
         this.description("steps.basic-info.description");
     };

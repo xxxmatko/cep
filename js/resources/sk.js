@@ -6,7 +6,14 @@ define([], function () {
                 "basic-info": {
                     "title": "Základné údaje",
                     "description": "Vyplňte prosím základné údaje",
-                    "nameLabel": "Priezvisko, meno, titul"
+                    "nameLabel": "Priezvisko, meno, titul",
+                    "personalId": "Osobné číslo",
+                    "section": "Útvar",
+                    "phone": "Telefón, klapka",
+                    "address": "Bydlisko",
+                    "car": "Určený dopravný prostriedok (pri vlastnom vozidle druh, ŠPZ, priem. spotreba PHM podľa TP)",
+                    "money": "Predpokladaná čiastka výdavkov EUR",
+                    "account": "Číslo účtu (IBAN)"
                 },
                 "arrivals": {
                     "title": "Odchody"

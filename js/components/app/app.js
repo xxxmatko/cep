@@ -37,6 +37,13 @@ define([
         this.hasNext = ko.computed(this._getHasNext, this);
 
         this.name = ko.observable("");
+        this.personalId = ko.observable("");
+        this.section = ko.observable("");
+        this.phone = ko.observable("");
+        this.address = ko.observable("");
+        this.car = ko.observable("");
+        this.money = ko.observable("");
+        this.account = ko.observable("");
     };
 
     //#endregion
@@ -88,7 +95,14 @@ define([
                 return {
                     title: this.title,
                     description: this.description,
-                    name: this.name
+                    name: this.name,
+                    personalId: this.personalId,
+                    section: this.section,
+                    phone: this.phone,
+                    address: this.address,
+                    car: this.car,
+                    money: this.money,
+                    account: this.account
                 };
             case "arrivals":
                 return {
