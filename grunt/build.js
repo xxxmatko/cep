@@ -28,6 +28,7 @@ module.exports = function (grunt) {
             "copy:img",
             "copy:css",
             "copy:js",
+            "copy:html",            
             "copy:config",
             "webfont",
             "less",

@@ -68,6 +68,15 @@ module.exports = function (grunt) {
                 filter: "isFile"
             }]
         },
+        html: {
+            files: [{
+                expand: true,
+                cwd: "html/",
+                src: ["**"],
+                dest: "wwwroot/html/",
+                filter: "isFile"
+            }]
+        },        
         js: {
             files: [{
                 expand: true,
