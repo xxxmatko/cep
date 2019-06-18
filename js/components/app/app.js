@@ -1,10 +1,14 @@
 define([
+    "require",
     "knockout",
-    "text!./app.html"
-], function (ko, view) {
+    "mustache",    
+    "text!./app.html",
+    "text!../../../../html/report.html"
+], function (require, ko, mustache, view, report) {
     //#region [ Fields ]
 
     var global = (function() { return this; })();
+    var previewWindow = null;
     //https://www.jqueryscript.net/demo/Material-Design-Wizard-Form-Plugin-jQuery-Bootstrap/
 
     //#endregion
@@ -142,7 +146,23 @@ define([
      * Finishes the wizard.
      */
     Model.prototype.finish = function() {
-        console.info("finish");
+        // Close current preview
+        if(previewWindow) {
+            previewWindow.close();
+            previewWindow = null;
+        }
+
+        // Open new preview window
+        previewWindow = global.open(require.toUrl("../../../../html/blank.html"), "this.fileName()", "titlebar=yes");
+
+        // Render report
+        var view = {};
+        var result = mustache.render(report, view);
+
+        // Write it to the output
+        previewWindow.document.open();
+        previewWindow.document.write(result);
+        previewWindow.document.close();
     };
 
 
