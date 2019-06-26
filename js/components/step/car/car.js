@@ -1,6 +1,6 @@
 define([
     "knockout",
-    "text!./basic-info.html"
+    "text!./car.html"
 ], function (ko, view) {
     //#region [ Constructor ]
 
@@ -11,22 +11,17 @@ define([
      * @param {object} info Component info.
 	 */
     var Model = function (args, info) {
-        console.log("BasicInfo()");
+        console.log("Car()");
     
         this.title = args.title || ko.observable("");
         this.description = args.description || ko.observable("");
-
-        this.name = args.name || ko.observable("");
-        this.personalId = args.personalId || ko.observable("");
-        this.section = args.section || ko.observable("");
-        this.phone = args.phone || ko.observable("");
-        this.address = args.address || ko.observable("");
-        this.car = args.car || ko.observable("");
-        this.money = args.money || ko.observable("");
-        this.account = args.account || ko.observable("");
                 
+        this.type = args.type || ko.observable("");
+        this.licensePlate = args.licensePlate || ko.observable("");
+        this.consumption = args.consumption || ko.observable("");
+        
         this.title("");
-        this.description("");
+        this.description("steps.car.description");
     };
 
     //#endregion
@@ -38,7 +33,7 @@ define([
      * Dispose.
      */
     Model.prototype.dispose = function () {
-        console.log("~BasicInfo()");
+        console.log("~Car()");
     };
 
     //#endregion

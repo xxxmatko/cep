@@ -34,7 +34,7 @@ define([
         this.title = ko.observable("");
         this.description = ko.observable("");
         this.step = ko.observable("");
-        this.steps = ko.observableArray(["basic-info", "arrivals", "summary"]);
+        this.steps = ko.observableArray(["basic-info", "car", "arrivals", "summary"]);
         this.stepParams = ko.computed(this._getStepParams, this);
         
         this.hasPrev = ko.computed(this._getHasPrev, this);
@@ -45,9 +45,12 @@ define([
         this.section = ko.observable("");
         this.phone = ko.observable("");
         this.address = ko.observable("");
-        this.car = ko.observable("");
         this.money = ko.observable("");
         this.account = ko.observable("");
+
+        this.carType = ko.observable("");
+        this.carLicensePlate = ko.observable("");
+        this.carConsumption = ko.observable("");
     };
 
     //#endregion
@@ -104,10 +107,17 @@ define([
                     section: this.section,
                     phone: this.phone,
                     address: this.address,
-                    car: this.car,
                     money: this.money,
                     account: this.account
                 };
+            case "car":
+                return {
+                    title: this.title,
+                    description: this.description,
+                    type: this.carType,
+                    licensePlate: this.carLicensePlate,
+                    consumption: this.carConsumption
+                };                
             case "arrivals":
                 return {
                     title: this.title,
@@ -162,7 +172,7 @@ define([
             section: this.section(),
             phone: this.phone(),
             address: this.address(),
-            car: this.car(),
+            car: this.carType() + ", " + this.carLicensePlate() + ", " + this.carConsumption() + "/100 km",
             money: this.money(),
             account: this.account()
         };

@@ -5,15 +5,20 @@ define([], function () {
             "steps": {
                 "basic-info": {
                     "title": "Základné údaje",
-                    "description": "Vyplňte prosím základné údaje",
                     "nameLabel": "Priezvisko, meno, titul",
                     "personalId": "Osobné číslo",
                     "section": "Útvar",
                     "phone": "Telefón, klapka",
                     "address": "Bydlisko",
-                    "car": "Určený dopravný prostriedok (pri vlastnom vozidle druh, ŠPZ, priem. spotreba PHM podľa TP)",
                     "money": "Predpokladaná čiastka výdavkov EUR",
                     "account": "Číslo účtu (IBAN)"
+                },
+                "car": {
+                    "title": "Dopravný prostriedok",
+                    "description": "Pri vlastnom vozidle druh, ŠPZ, priem. spotreba PHM podľa TP",
+                    "type": "Druh vozidla",
+                    "licensePlate": "ŠPZ",
+                    "consumption": "Spotreba l/100 km"
                 },
                 "arrivals": {
                     "title": "Odchody"
