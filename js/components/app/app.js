@@ -126,7 +126,8 @@ define([
             case "summary":
                 return {
                     title: this.title,
-                    description: this.description
+                    description: this.description,
+                    content: this.toHtml()
                 };
             default:
                 return {};
@@ -151,6 +152,26 @@ define([
         this.step(step);
     };
 
+
+    /**
+     * Creates html report.
+     */
+    Model.prototype.toHtml = function() {
+        // Render report
+        var view = {
+            name: this.name(),
+            personalId: this.personalId(),
+            section: this.section(),
+            phone: this.phone(),
+            address: this.address(),
+            car: this.carType() + ", " + this.carLicensePlate() + ", " + this.carConsumption() + "/100 km",
+            money: this.money(),
+            account: this.account()
+        };
+
+        return mustache.render(report, view);
+    };   
+
   
     /**
      * Finishes the wizard.
@@ -165,22 +186,9 @@ define([
         // Open new preview window
         previewWindow = global.open(require.toUrl("../../../../html/blank.html"), "cep", "titlebar=yes");
 
-        // Render report
-        var view = {
-            name: this.name(),
-            personalId: this.personalId(),
-            section: this.section(),
-            phone: this.phone(),
-            address: this.address(),
-            car: this.carType() + ", " + this.carLicensePlate() + ", " + this.carConsumption() + "/100 km",
-            money: this.money(),
-            account: this.account()
-        };
-        var result = mustache.render(report, view);
-
         // Write it to the output
         previewWindow.document.open();
-        previewWindow.document.write(result);
+        previewWindow.document.write(this.toHtml());
         previewWindow.document.close();
     };
 
