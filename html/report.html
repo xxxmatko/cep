@@ -227,7 +227,7 @@
             <tr class="row">
                 <td colspan="6">Zamestnávateľ</td>
                 <td colspan="2" class="bd--left w--19">Osobné číslo</td>
-                <td colspan="2" class="bd--bottom text--blue text--center w--19">111</td>
+                <td colspan="2" class="bd--bottom text--blue text--center w--19">{{personalId}}</td>
             </tr>
             <tr class="row">
                 <td rowspan="2" colspan="2">
@@ -235,11 +235,11 @@
                 </td>
                 <td rowspan="2" colspan="4" class="text--title w--38">Cestovný príkaz</td>
                 <td colspan="2" class="bd--left">Útvar</td>
-                <td colspan="2" class="bd--bottom text--blue text--center">oddelenie xy</td>
+                <td colspan="2" class="bd--bottom text--blue text--center">{{section}}</td>
             </tr>
             <tr class="row">
                 <td colspan="2" class="bd--left">Telefón, klapka</td>
-                <td colspan="2" class="bd--bottom text--blue text--center">xxx</td>
+                <td colspan="2" class="bd--bottom text--blue text--center">{{phone}}</td>
             </tr>
             <tr class="row row--divider">
                 <td colspan="6"></td>
@@ -248,13 +248,13 @@
             <tr class="row">
                 <td class="text--right w--4">1.</td>
                 <td>Priezvisko, meno, titul</td>
-                <td colspan="4" class="bd--bottom text--blue text--center">Janko Hrasko</td>
+                <td colspan="4" class="bd--bottom text--blue text--center">{{name}}</td>
                 <td colspan="4" class="bd--top bd--left">Normálny pracovný čas</td>
             </tr>
             <tr class="row">
                 <td class="text--right">2.</td>
                 <td>Bydlisko</td>
-                <td colspan="4" class="bd--bottom text--blue text--center">Obycajna 1, 123 45 Bratislava</td>
+                <td colspan="4" class="bd--bottom text--blue text--center">{{address}}</td>
                 <td class="bd--left text--right">od</td>
                 <td class="bd--bottom text--blue text--center w--14">8:00</td>
                 <td class="text--right">do</td>
@@ -348,12 +348,12 @@
             <tr class="row">
                 <td class="text--right w--4">4.</td>
                 <td colspan="6">Určený dopravný prostriedok (pri vlastnom vozidle druh, ŠPZ, priem. spotreba PHM podľa TP)</td>
-                <td colspan="3" class="bd--bottom text--blue w--33">Seat X, BL123FG, 6.0l/100 km</td>
+                <td colspan="3" class="bd--bottom text--blue w--33">{{car}}</td>
             </tr>
             <tr class="row">
                 <td class="text--right w--4">5.</td>
                 <td colspan="2">Predpokladaná čiastka výdavkov EUR</td>
-                <td colspan="7" class="bd--bottom text--blue w--68">000.00 EUR (SK87 0900 0000 0000 0000 0000)</td>
+                <td colspan="7" class="bd--bottom text--blue w--68">{{money}} EUR ({{account}})</td>
             </tr>
             <tr class="row">
                 <td class="text--right w--4">6.</td>

@@ -153,10 +153,19 @@ define([
         }
 
         // Open new preview window
-        previewWindow = global.open(require.toUrl("../../../../html/blank.html"), "this.fileName()", "titlebar=yes");
+        previewWindow = global.open(require.toUrl("../../../../html/blank.html"), "cep", "titlebar=yes");
 
         // Render report
-        var view = {};
+        var view = {
+            name: this.name(),
+            personalId: this.personalId(),
+            section: this.section(),
+            phone: this.phone(),
+            address: this.address(),
+            car: this.car(),
+            money: this.money(),
+            account: this.account()
+        };
         var result = mustache.render(report, view);
 
         // Write it to the output
