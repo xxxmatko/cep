@@ -17,6 +17,7 @@ define([
         this.description = args.description || ko.observable("");
 
         this.items = args.items || ko.observableArray([]);
+        this.day = ko.observable("");
         
         this.title("");
         this.description("");

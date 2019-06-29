@@ -1,3 +1,8 @@
 <div class="step">
-    arrivals
+    <div class="row">
+        <div class="input-field col s6 m2 l1 offset-l1 xl1 offset-xl2">
+            <input id="day" type="text" data-bind="textInput: day, inputField: true, autoFocus: true" />
+            <label for="day" data-bind="i18n: 'steps.arrivals.dayLabel', css: { 'active': day().length }"></label>
+        </div>
+    </div>
 </ul>

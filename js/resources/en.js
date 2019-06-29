@@ -21,7 +21,8 @@ define([], function () {
                     "consumption": "en:Spotreba l/100 km"
                 },
                 "arrivals": {
-                    "title": "en:Odchody"
+                    "title": "en:Odchody",
+                    "dayLabel": "en:Deň"
                 },
                 "summary": {
                     "title": "en:Zhrnutie"
