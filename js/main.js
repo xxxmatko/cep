@@ -8,6 +8,7 @@ define([
     "my/bindings/inputField",
     "my/bindings/iframeContent",
     "my/bindings/autoFocus",
+    "my/bindings/enter",
     "my/extenders/async"
 ], function ($, ko, koValidation, M, i18n) {
     //#region [ Fields ]
