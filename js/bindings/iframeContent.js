@@ -24,6 +24,13 @@ define([
         // Clear the content
         element.contentWindow.document.close();
         element.contentWindow.document.write(value);
+
+        // Set some style
+        var pages = element.contentWindow.document.querySelectorAll(".page");
+        pages.forEach(function(p) {
+            p.style.padding = 0;
+            p.style.boxShadow = "none";
+        });
     };
 
     //#endregion
