@@ -29,6 +29,17 @@ define([
     //#region [ Methods : Public ]
     
     /**
+     * Adds new arrival for the input day.
+     * 
+     * @param {number} day Day in the current month.
+     */
+    Model.prototype.add = function(day) {
+        var d =  ko.unwrap(day);
+        console.info(d);
+    };
+
+
+    /**
      * Dispose.
      */
     Model.prototype.dispose = function () {
