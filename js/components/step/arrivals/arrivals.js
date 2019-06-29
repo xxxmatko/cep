@@ -35,7 +35,27 @@ define([
      */
     Model.prototype.add = function(day) {
         var d =  ko.unwrap(day);
-        console.info(d);
+        
+        // Check if the input day is valid
+        if(isNaN(d)) {
+            this.day("");
+            return;
+        }
+
+        // Create new empty arrival
+        var arrival = {
+            day: ko.observable(d)
+        };
+
+        // Put the arrival in the list and sort it
+        this.items.push(arrival);
+        this.items.sort(function(l, r) {
+            return (l.day() === r.day()) ? 0 : 
+                   (l.day() < r.day()) ? -1 : 
+                   1;
+        });
+
+        this.day("");
     };
 
 
