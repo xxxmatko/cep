@@ -10,6 +10,7 @@ define([
     var global = (function() { return this; })();
     var previewWindow = null;
     //https://www.jqueryscript.net/demo/Material-Design-Wizard-Form-Plugin-jQuery-Bootstrap/
+    //https://openrouteservice.org/dev/#/api-docs/geocode/autocomplete/get
 
     //#endregion
     
@@ -51,6 +52,8 @@ define([
         this.carType = ko.observable("");
         this.carLicensePlate = ko.observable("");
         this.carConsumption = ko.observable("");
+
+        this.arrivals = ko.observableArray([]);
     };
 
     //#endregion
@@ -121,7 +124,8 @@ define([
             case "arrivals":
                 return {
                     title: this.title,
-                    description: this.description
+                    description: this.description,
+                    items: this.arrivals
                 };
             case "summary":
                 return {

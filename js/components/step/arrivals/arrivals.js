@@ -16,6 +16,8 @@ define([
         this.title = args.title || ko.observable("");
         this.description = args.description || ko.observable("");
 
+        this.items = args.items || ko.observableArray([]);
+        
         this.title("");
         this.description("");
     };
