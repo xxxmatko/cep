@@ -1,7 +1,8 @@
 define([
     "knockout",
-    "text!./arrivals.html"
-], function (ko, view) {
+    "text!./arrivals.html",
+    "utils/guid"
+], function (ko, view, guid) {
     //#region [ Constructor ]
 
     /**
@@ -44,6 +45,7 @@ define([
 
         // Create new empty arrival
         var arrival = {
+            id: guid(),
             day: ko.observable(d)
         };
 

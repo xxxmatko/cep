@@ -8,8 +8,8 @@
     <!-- ko foreach: items -->
     <div class="row">
         <div class="input-field col s6 m2 l1 offset-l1 xl1 offset-xl2">
-            <input type="text" data-bind="textInput: $data.day, inputField: true, attr: { id: 'day_' + $data.day() }" />
-            <label data-bind="i18n: 'steps.arrivals.dayLabel', css: { 'active': $data.day().length }, attr: { for: 'day_' + $data.day() }"></label>
+            <input type="text" data-bind="textInput: $data.day, inputField: true, attr: { id: 'day_' + $data.id }" />
+            <label data-bind="i18n: 'steps.arrivals.dayLabel', css: { 'active': $data.day().length }, attr: { for: 'day_' + $data.id }"></label>
         </div>        
     </div>
     <!-- /ko -->
