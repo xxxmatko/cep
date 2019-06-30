@@ -19,7 +19,11 @@
             <input type="text" data-bind="textInput: $data.end1, inputField: true, attr: { id: 'end1_' + $data.id }" />
             <label data-bind="i18n: 'steps.arrivals.endLabel', css: { 'active': $data.end1().length }, attr: { for: 'end1_' + $data.id }"></label>
         </div>        
-        <div class="input-field col s12 m4 l3 xl6 offset-xl3">
+        <div class="input-field col s12 m4 l3 xl1">
+            <input type="text" data-bind="textInput: $data.len, inputField: true, attr: { id: 'len_' + $data.id }" />
+            <label data-bind="i18n: 'steps.arrivals.lenLabel', css: { 'active': $data.len().length }, attr: { for: 'len_' + $data.id }"></label>
+        </div>        
+        <div class="input-field col s12 m4 l3 xl7 offset-xl3">
             <input type="text" data-bind="textInput: $data.purpose, inputField: true, attr: { id: 'purpose_' + $data.id }" />
             <label data-bind="i18n: 'steps.arrivals.purposeLabel', css: { 'active': $data.purpose().length }, attr: { for: 'purpose_' + $data.id }"></label>
         </div>        

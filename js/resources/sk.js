@@ -25,7 +25,8 @@ define([], function () {
                     "dayLabel": "Deň",
                     "startLabel": "Začiatok",
                     "endLabel": "Koniec",
-                    "purposeLabel": "Učel cesty"
+                    "purposeLabel": "Učel cesty",
+                    "lenLabel": "Dĺžka"
                 },
                 "summary": {
                     "title": "Zhrnutie"
