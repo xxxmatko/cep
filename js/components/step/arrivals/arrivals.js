@@ -46,7 +46,9 @@ define([
         // Create new empty arrival
         var arrival = {
             id: guid(),
-            day: ko.observable(d)
+            day: ko.observable(d),
+            start1: ko.observable(""),
+            end1: ko.observable("")
         };
 
         // Put the arrival in the list and sort it

@@ -7,9 +7,17 @@
     </div>
     <!-- ko foreach: items -->
     <div class="row">
-        <div class="input-field col s6 m2 l1 offset-l1 xl1 offset-xl2">
+        <div class="input-field col s12 m2 l1 offset-l1 xl1 offset-xl2">
             <input type="text" data-bind="textInput: $data.day, inputField: true, attr: { id: 'day_' + $data.id }" />
             <label data-bind="i18n: 'steps.arrivals.dayLabel', css: { 'active': $data.day().length }, attr: { for: 'day_' + $data.id }"></label>
+        </div>
+        <div class="input-field col s12 m4 l3 xl3">
+            <input type="text" data-bind="textInput: $data.start1, inputField: true, attr: { id: 'start1_' + $data.id }" />
+            <label data-bind="i18n: 'steps.arrivals.startLabel', css: { 'active': $data.start1().length }, attr: { for: 'start1_' + $data.id }"></label>
+        </div>
+        <div class="input-field col s12 m4 l3 xl3">
+            <input type="text" data-bind="textInput: $data.end1, inputField: true, attr: { id: 'end1_' + $data.id }" />
+            <label data-bind="i18n: 'steps.arrivals.endLabel', css: { 'active': $data.end1().length }, attr: { for: 'end1_' + $data.id }"></label>
         </div>        
     </div>
     <!-- /ko -->

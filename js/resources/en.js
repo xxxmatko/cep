@@ -22,7 +22,9 @@ define([], function () {
                 },
                 "arrivals": {
                     "title": "en:Odchody",
-                    "dayLabel": "en:Deň"
+                    "dayLabel": "en:Deň",
+                    "startLabel": "en:Začiatok",
+                    "endLabel": "en:Koniec"
                 },
                 "summary": {
                     "title": "en:Zhrnutie"
