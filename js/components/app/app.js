@@ -161,6 +161,18 @@ define([
      * Creates html report.
      */
     Model.prototype.toHtml = function() {
+        // Get arrivals
+        //var arrivals = this.arrivals();
+        var places = Array.apply(null, Array(11));
+        places = places.map(function (x, i) { 
+            return {
+                start: "",
+                end: "",
+                place: "",
+                purpose: ""
+            }; 
+        });
+
         // Render report
         var view = {
             name: this.name(),
@@ -170,7 +182,8 @@ define([
             address: this.address(),
             car: this.carType() + ", " + this.carLicensePlate() + ", " + this.carConsumption() + "/100 km",
             money: this.money(),
-            account: this.account()
+            account: this.account(),
+            places: places
         };
 
         return mustache.render(report, view);

@@ -272,72 +272,22 @@
                 <td colspan="4" class="text--center text--middle bd--left">Účel cesty</td>
                 <td class="text--center text--middle bd--left w--16">Koniec cesty<br>(miesto, dátum)</td>
             </tr>
+            {{#places}}
             <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">06/05/2019</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top">BB</td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top">stretnutie oddelenia</td>
-                <td  class="text--center text--middle text--blue bd--left bd--top">06/05/2019</td>
+                <td colspan="2" class="text--center text--middle text--blue bd--top">
+                    {{start}}
+                </td>
+                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top">
+                    {{place}}
+                </td>
+                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top">
+                    {{purpose}}
+                </td>
+                <td  class="text--center text--middle text--blue bd--left bd--top">
+                    {{end}}
+                </td>
             </tr>
-            <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">&nbsp;</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td  class="text--center text--middle text--blue bd--left bd--top"></td>
-            </tr>
-            <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">&nbsp;</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td  class="text--center text--middle text--blue bd--left bd--top"></td>
-            </tr>
-            <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">&nbsp;</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td  class="text--center text--middle text--blue bd--left bd--top"></td>
-            </tr>
-            <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">&nbsp;</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td  class="text--center text--middle text--blue bd--left bd--top"></td>
-            </tr>
-            <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">&nbsp;</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td  class="text--center text--middle text--blue bd--left bd--top"></td>
-            </tr>
-            <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">&nbsp;</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td  class="text--center text--middle text--blue bd--left bd--top"></td>
-            </tr>
-            <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">&nbsp;</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td  class="text--center text--middle text--blue bd--left bd--top"></td>
-            </tr>
-            <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">&nbsp;</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td  class="text--center text--middle text--blue bd--left bd--top"></td>
-            </tr>
-            <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">&nbsp;</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td  class="text--center text--middle text--blue bd--left bd--top"></td>
-            </tr>
-            <tr class="row">
-                <td colspan="2" class="text--center text--middle text--blue bd--top">&nbsp;</td>
-                <td colspan="3" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td colspan="4" class="text--center text--middle text--blue bd--left bd--top"></td>
-                <td  class="text--center text--middle text--blue bd--left bd--top"></td>
-            </tr>
+            {{/places}}
         </table>
         <table class="table table--header">
             <tr class="row">
