@@ -24,7 +24,8 @@ define([], function () {
                     "title": "Odchody",
                     "dayLabel": "Deň",
                     "startLabel": "Začiatok",
-                    "endLabel": "Koniec"
+                    "endLabel": "Koniec",
+                    "purposeLabel": "Učel cesty"
                 },
                 "summary": {
                     "title": "Zhrnutie"

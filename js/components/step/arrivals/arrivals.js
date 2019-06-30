@@ -48,7 +48,8 @@ define([
             id: guid(),
             day: ko.observable(d),
             start1: ko.observable(""),
-            end1: ko.observable("")
+            end1: ko.observable(""),
+            purpose: ko.observable("")
         };
 
         // Put the arrival in the list and sort it
