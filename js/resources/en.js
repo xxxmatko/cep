@@ -28,7 +28,8 @@ define([], function () {
                     "purposeLabel": "en:Učel cesty",
                     "lenLabel": "en:Dĺžka",
                     "monthLabel": "en:Mesiac",
-                    "yearLabel": "en:Rok"
+                    "yearLabel": "en:Rok",
+                    "removeLabel": "en:Odstrániť"
                 },
                 "summary": {
                     "title": "en:Zhrnutie"
