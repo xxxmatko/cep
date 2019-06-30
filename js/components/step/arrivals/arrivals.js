@@ -17,6 +17,8 @@ define([
         this.title = args.title || ko.observable("");
         this.description = args.description || ko.observable("");
 
+        this.month = args.month || ko.observable("");
+        this.year = args.year || ko.observable("");
         this.items = args.items || ko.observableArray([]);
         this.day = ko.observable("");
         

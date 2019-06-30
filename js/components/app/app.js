@@ -53,6 +53,8 @@ define([
         this.carLicensePlate = ko.observable("");
         this.carConsumption = ko.observable("");
 
+        this.month = ko.observable(new Date().getMonth() + 1);
+        this.year = ko.observable(new Date().getFullYear());
         this.arrivals = ko.observableArray([]);
     };
 
@@ -125,6 +127,8 @@ define([
                 return {
                     title: this.title,
                     description: this.description,
+                    month: this.month,
+                    year: this.year, 
                     items: this.arrivals
                 };
             case "summary":

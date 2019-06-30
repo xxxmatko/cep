@@ -1,6 +1,16 @@
 <div class="step">
     <div class="row">
         <div class="input-field col s6 m2 l1 offset-l1 xl1 offset-xl2">
+            <input id="month" type="text" data-bind="textInput: month, inputField: true" />
+            <label for="month" data-bind="i18n: 'steps.arrivals.monthLabel', css: { 'active': month() }"></label>
+        </div>
+        <div class="input-field col s6 m2 l1 offset-l1 xl2">
+            <input id="year" type="text" data-bind="textInput: year, inputField: true" />
+            <label for="year" data-bind="i18n: 'steps.arrivals.yearLabel', css: { 'active': year() }"></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6 m2 l1 offset-l1 xl1 offset-xl2">
             <input id="day" type="text" data-bind="textInput: day, inputField: true, autoFocus: true, enter: $component.add.bind($component, day)" />
             <label for="day" data-bind="i18n: 'steps.arrivals.dayLabel', css: { 'active': day().length }"></label>
         </div>
