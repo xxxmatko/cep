@@ -165,15 +165,32 @@ define([
      * Creates html report.
      */
     Model.prototype.toHtml = function() {
+        // Get month and year
+        var m = this.month();
+        var y = this.year();
+
         // Get arrivals
-        //var arrivals = this.arrivals();
+        var arrivals = this.arrivals();
+        
+        // Create places
         var places = Array.apply(null, Array(11));
         places = places.map(function (x, i) { 
+            var a = arrivals[i] || null;
+
+            if(!a) {
+                return {
+                    start: "",
+                    end: "",
+                    place: "",
+                    purpose: ""
+                }; 
+            }
+
             return {
-                start: "",
-                end: "",
-                place: "",
-                purpose: ""
+                start: a.day1() + ". " + m + ". " + y,
+                end: a.day2() + ". " + m + ". " + y,
+                place: a.end1(),
+                purpose: a.purpose()
             }; 
         });
 

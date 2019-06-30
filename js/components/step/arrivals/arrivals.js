@@ -48,7 +48,8 @@ define([
         // Create new empty arrival
         var arrival = {
             id: guid(),
-            day: ko.observable(d),
+            day1: ko.observable(d),
+            day2: ko.observable(d),
             start1: ko.observable(""),
             end1: ko.observable(""),
             purpose: ko.observable(""),
@@ -58,8 +59,8 @@ define([
         // Put the arrival in the list and sort it
         this.items.push(arrival);
         this.items.sort(function(l, r) {
-            return (l.day() === r.day()) ? 0 : 
-                   (l.day() < r.day()) ? -1 : 
+            return (l.day1() === r.day1()) ? 0 : 
+                   (l.day1() < r.day1()) ? -1 : 
                    1;
         });
 
